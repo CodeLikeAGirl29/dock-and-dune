@@ -75,10 +75,14 @@ export default function Guide() {
             <m.article
               key={s.title}
               variants={item}
+              whileHover={{ y: -8 }}
+              transition={{ type: "spring", stiffness: 300, damping: 22 }}
               className="coastal-card bg-sand p-8 flex flex-col gap-4"
             >
               <div className="flex items-center justify-between">
-                <span
+                <m.span
+                  whileHover={{ rotate: 12, scale: 1.08 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 15 }}
                   className={`flex items-center justify-center size-11 rounded-full ${
                     s.accent === "rope"
                       ? "bg-rope/15 text-rope-deep"
@@ -86,7 +90,7 @@ export default function Guide() {
                   }`}
                 >
                   {s.icon}
-                </span>
+                </m.span>
                 <span className="text-[10px] font-semibold uppercase tracking-widest text-muted">
                   {s.tag}
                 </span>
