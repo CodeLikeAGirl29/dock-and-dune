@@ -74,12 +74,15 @@ export default function Hero() {
           variants={item}
           className="mt-8 text-base sm:text-xl leading-relaxed text-navy/60 max-w-xl mx-auto"
         >
-          Flood zones, dock permitting, wind mitigation, and the insurance
-          math that catches buyers off guard — explained plainly, before
-          it becomes a surprise at closing.
+          Flood zones, dock permitting, wind mitigation, and the insurance math
+          that catches buyers off guard — explained plainly, before it becomes a
+          surprise at closing.
         </m.p>
 
-        <m.div variants={item} className="mt-10 flex flex-wrap justify-center gap-4">
+        <m.div
+          variants={item}
+          className="mt-10 flex flex-wrap justify-center gap-4"
+        >
           <m.a
             href="#guide"
             whileHover={{ scale: 1.04, y: -2 }}
@@ -110,26 +113,33 @@ export default function Hero() {
 
         <m.div
           variants={item}
-          animate={{ y: [0, 6, 0] }}
-          transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
-          className="mt-16 text-navy/30"
+          className="mt-16 flex flex-col items-center gap-1"
         >
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 20 20"
-            fill="none"
-            className="mx-auto"
-            aria-hidden="true"
-          >
-            <path
-              d="M4 7l6 6 6-6"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
+          {[0, 1, 2].map((i) => (
+            <m.svg
+              key={i}
+              width="22"
+              height="10"
+              viewBox="0 0 22 10"
+              fill="none"
+              aria-hidden="true"
+              animate={{ opacity: [0.25, 1, 0.25] }}
+              transition={{
+                duration: 2.3,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: i * 0.26,
+              }}
+            >
+              <path
+                d="M2 2l9 6 9-6"
+                stroke="var(--rope)"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </m.svg>
+          ))}
         </m.div>
       </m.div>
 

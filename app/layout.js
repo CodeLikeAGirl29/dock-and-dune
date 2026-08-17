@@ -17,7 +17,7 @@ import "./globals.css";
 // access the build needs.
 
 export const metadata = {
-  metadataBase: new URL("https://dockanddune.lindseyhoward.dev"),
+  metadataBase: new URL("https://dock-and-dune.vercel.app"),
   title: "Dock & Dune | The Waterfront Ownership Guide",
   description:
     "Flood zones, dock permitting, wind mitigation, and the insurance math that catches buyers off guard on Okaloosa County's waterfront — from Lindsey Howard, eXp Realty.",
@@ -34,7 +34,7 @@ export const metadata = {
     title: "Dock & Dune | The Waterfront Ownership Guide",
     description:
       "What actually changes when a property touches the water — flood zones, permitting, and insurance, explained plainly.",
-    url: "https://dockanddune.lindseyhoward.dev",
+    url: "https://dock-and-dune.vercel.app",
     siteName: "Dock & Dune",
     locale: "en_US",
     type: "website",

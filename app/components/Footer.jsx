@@ -18,8 +18,8 @@ export default function Footer() {
           Dock <span className="italic text-rope">&amp;</span> Dune
         </h3>
         <p className="mt-3 text-cream/50 text-sm max-w-md mx-auto leading-relaxed">
-          A guide from Lindsey Howard — Florida Real Estate Sales Associate,
-          eXp Realty, serving Fort Walton Beach, Destin &amp; Okaloosa County.
+          A guide from Lindsey Howard — Florida Real Estate Sales Associate, eXp
+          Realty, serving Fort Walton Beach, Destin &amp; Okaloosa County.
         </p>
 
         <ul className="mt-6 flex flex-wrap justify-center gap-6">
@@ -46,7 +46,7 @@ export default function Footer() {
         </ul>
 
         <m.a
-          href="https://www.lindseyhoward.dev"
+          href="https://www.lhrealestate.cc"
           target="_blank"
           rel="noopener noreferrer"
           whileHover={{ scale: 1.04 }}
@@ -60,8 +60,8 @@ export default function Footer() {
         <div className="rope-dots mt-10 opacity-40" />
 
         <p className="mt-6 text-[10px] uppercase tracking-widest text-cream/30">
-          &copy; {currentYear} Lindsey Howard. Estimates are illustrative
-          only and not a substitute for a licensed insurance quote.
+          &copy; {currentYear} Lindsey Howard. Estimates are illustrative only
+          and not a substitute for a licensed insurance quote.
         </p>
       </m.div>
     </footer>
