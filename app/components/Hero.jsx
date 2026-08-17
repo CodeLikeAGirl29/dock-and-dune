@@ -100,6 +100,14 @@ export default function Hero() {
           </m.a>
         </m.div>
 
+        <m.a
+          variants={item}
+          href="#storm-prep"
+          className="mt-6 inline-block text-xs font-semibold uppercase tracking-widest text-rope-deep hover:text-rope transition-colors"
+        >
+          Or jump to the Hurricane Prep Checklist &rarr;
+        </m.a>
+
         <m.div
           variants={item}
           animate={{ y: [0, 6, 0] }}

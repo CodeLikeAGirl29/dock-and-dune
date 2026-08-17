@@ -71,9 +71,9 @@ export default function CostCalculator() {
           </h2>
           <p className="mt-4 text-cream/60 text-[15px] leading-relaxed">
             A rough estimate of how flood zone, wind mitigation status, and a
-            private dock shift annual insurance costs. Illustrative only — not a
-            quote. Get an actual quote from a licensed FL insurance agent before
-            relying on any number here.
+            private dock shift annual insurance costs. Illustrative only —
+            not a quote. Get an actual quote from a licensed FL insurance
+            agent before relying on any number here.
           </p>
         </m.div>
 
@@ -232,9 +232,7 @@ export default function CostCalculator() {
                     transition={{ duration: 0.2 }}
                     className="block font-display text-xl text-seafoam tabular-nums"
                   >
-                    {windMitigation
-                      ? `-${currency(results.windSavings)}`
-                      : "$0"}
+                    {windMitigation ? `-${currency(results.windSavings)}` : "$0"}
                   </m.span>
                 </AnimatePresence>
                 <span className="text-[10px] font-semibold text-muted uppercase tracking-widest">
@@ -257,8 +255,8 @@ export default function CostCalculator() {
               Looking at a specific waterfront property?
             </h4>
             <p className="text-cream/60 text-sm">
-              I'll pull the actual flood zone, dock permit history, and wind
-              mitigation status before you write an offer.
+              I'll pull the actual flood zone, dock permit history, and
+              wind mitigation status before you write an offer.
             </p>
           </div>
           <m.a

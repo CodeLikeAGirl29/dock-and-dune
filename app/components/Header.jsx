@@ -39,7 +39,7 @@ export default function Header() {
         </a>
 
         <m.a
-          href="https://www.lhrealestate.cc"
+          href="https://www.lindseyhoward.dev"
           target="_blank"
           rel="noopener noreferrer"
           whileHover={{ scale: 1.04 }}
