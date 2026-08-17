@@ -35,6 +35,8 @@
   --color-ink: var(--ink);
   --color-cream: var(--cream);
   --color-muted: var(--muted);
+  --font-display: "Fraunces", serif;
+  --font-sans: "Inter", sans-serif;
 }
 
 body {

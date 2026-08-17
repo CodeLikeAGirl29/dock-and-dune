@@ -1,18 +1,20 @@
-import { Fraunces, Inter } from "next/font/google";
+import "@fontsource/fraunces/400.css";
+import "@fontsource/fraunces/400-italic.css";
+import "@fontsource/fraunces/600.css";
+import "@fontsource/fraunces/600-italic.css";
+import "@fontsource/inter/400.css";
+import "@fontsource/inter/500.css";
+import "@fontsource/inter/600.css";
+import "@fontsource/inter/700.css";
 import { LazyMotion, domAnimation } from "framer-motion";
 import "./globals.css";
 
-const fraunces = Fraunces({
-  subsets: ["latin"],
-  variable: "--font-display",
-  weight: ["400", "600"],
-  style: ["normal", "italic"],
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
+// Fonts are self-hosted via @fontsource (actual .woff2 files ship inside
+// the npm package itself) instead of next/font/google, which fetches
+// from fonts.gstatic.com at build time. That build-time fetch has
+// failed repeatedly on Vercel for this project — @fontsource removes
+// the dependency entirely, since npm install is the only network
+// access the build needs.
 
 export const metadata = {
   metadataBase: new URL("https://dockanddune.lindseyhoward.dev"),
@@ -47,11 +49,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang="en"
-      className={`${fraunces.variable} ${inter.variable}`}
-      suppressHydrationWarning
-    >
+    <html lang="en" suppressHydrationWarning>
       <body className="font-sans bg-sand text-ink antialiased">
         <LazyMotion features={domAnimation} strict>
           {children}
