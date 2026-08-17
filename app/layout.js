@@ -1,22 +1,17 @@
-import { Manrope, Inter, IBM_Plex_Mono } from "next/font/google";
+import { Fraunces, Inter } from "next/font/google";
 import { LazyMotion, domAnimation } from "framer-motion";
 import "./globals.css";
 
-const manrope = Manrope({
+const fraunces = Fraunces({
   subsets: ["latin"],
   variable: "--font-display",
-  weight: ["500", "700", "800"],
+  weight: ["400", "600"],
+  style: ["normal", "italic"],
 });
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
-});
-
-const plexMono = IBM_Plex_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-  weight: ["400", "500"],
 });
 
 export const metadata = {
@@ -54,10 +49,10 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${manrope.variable} ${inter.variable} ${plexMono.variable}`}
+      className={`${fraunces.variable} ${inter.variable}`}
       suppressHydrationWarning
     >
-      <body className="font-sans bg-background text-foreground antialiased">
+      <body className="font-sans bg-sand text-ink antialiased">
         <LazyMotion features={domAnimation} strict>
           {children}
         </LazyMotion>

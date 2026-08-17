@@ -8,18 +8,21 @@ const sections = [
     title: "Flood Zones Aren't a Formality",
     body: "FEMA flood zone designation drives everything downstream of it — whether a lender requires flood insurance, what that policy costs, and whether a future addition or rebuild needs to be elevated. Two houses a block apart can sit in completely different zones, with a meaningfully different cost of ownership as a result.",
     tag: "Zone X, AE & VE",
+    accent: "seafoam",
   },
   {
     icon: <FaAnchor className="size-5" />,
     title: "Docks, Seawalls, and the Permitting Maze",
     body: "A private dock isn't just a construction project — it typically touches state (FDEP), and sometimes federal (Army Corps), permitting on top of the county. Buyers inheriting an existing dock should confirm it was permitted in the first place; an unpermitted structure can become the new owner's problem to resolve.",
     tag: "FDEP / Army Corps",
+    accent: "rope",
   },
   {
     icon: <FaShieldHalved className="size-5" />,
     title: "Wind Mitigation Can Move the Number More Than Price Does",
     body: "A current wind mitigation inspection — documenting roof shape, opening protection, and roof-to-wall connections — can meaningfully change a windstorm premium. On coastal property, it's often the single highest-leverage document a buyer can request before closing.",
     tag: "Windstorm Premium",
+    accent: "seafoam",
   },
 ];
 
@@ -39,20 +42,22 @@ const item = {
 
 export default function Guide() {
   return (
-    <section id="guide" className="charcoal-section py-24 border-t border-foreground/5">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <section id="guide" className="bg-sand-deep py-24">
+      <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <m.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-12 max-w-2xl"
+          className="mb-14 max-w-xl"
         >
-          <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            What Actually <span className="text-reef">Changes</span>
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-rope-deep mb-3">
+            The Guide
+          </p>
+          <h2 className="font-display text-4xl sm:text-5xl text-navy">
+            What Actually <span className="italic text-rope">Changes</span>
           </h2>
-          <span className="mt-2 block h-[3px] w-12 bg-steel" />
-          <p className="mt-4 text-foreground/60 text-[15px] leading-relaxed">
+          <p className="mt-4 text-navy/60 text-[15px] leading-relaxed">
             None of this makes waterfront property a bad buy — it makes it a
             different kind of buy, one where the diligence checklist is
             longer and the insurance quote matters as much as the appraisal.
@@ -70,20 +75,24 @@ export default function Guide() {
             <m.article
               key={s.title}
               variants={item}
-              className="frame border border-foreground/10 bg-surface p-8 flex flex-col gap-4"
+              className="coastal-card bg-sand p-8 flex flex-col gap-4"
             >
               <div className="flex items-center justify-between">
-                <span className="flex items-center justify-center size-10 rounded-full bg-reef/10 text-reef">
+                <span
+                  className={`flex items-center justify-center size-11 rounded-full ${
+                    s.accent === "rope"
+                      ? "bg-rope/15 text-rope-deep"
+                      : "bg-seafoam/15 text-seafoam"
+                  }`}
+                >
                   {s.icon}
                 </span>
-                <span className="font-mono text-[10px] uppercase tracking-widest text-steel border border-foreground/10 px-2 py-1">
+                <span className="text-[10px] font-semibold uppercase tracking-widest text-muted">
                   {s.tag}
                 </span>
               </div>
-              <h3 className="font-display text-xl font-bold text-foreground">
-                {s.title}
-              </h3>
-              <p className="text-sm/relaxed text-foreground/60">{s.body}</p>
+              <h3 className="font-display text-xl text-navy">{s.title}</h3>
+              <p className="text-sm leading-relaxed text-navy/60">{s.body}</p>
             </m.article>
           ))}
         </m.div>
