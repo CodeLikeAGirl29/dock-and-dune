@@ -1,0 +1,136 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+:root {
+  --background: #101113;
+  /* Charcoal Ink — primary dark canvas */
+  --foreground: #ECE9E4;
+  /* Warm Ivory — primary text on dark */
+  --surface: #1A1C1F;
+  /* Elevated Graphite — cards, secondary panels */
+  --muted: #8A8D93;
+  /* Cool Gray — labels, secondary text, borders */
+  --paper: #F5F3EE;
+  /* Warm Paper — form fields, light contrast blocks */
+  --ink: #17181A;
+  /* text color used on --paper */
+  --reef: #2E86AB;
+  /* primary accent — CTAs, emphasis (coastal ocean blue) */
+  --steel: #5C7A99;
+  /* secondary accent — links, hover states */
+  --signal: var(--reef);
+  --gulf: var(--steel);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-muted: var(--muted);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-reef: var(--reef);
+  --color-steel: var(--steel);
+  --color-signal: var(--signal);
+  --color-gulf: var(--gulf);
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+}
+
+.charcoal-section {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.surface-section {
+  background: var(--surface);
+  color: var(--foreground);
+}
+
+.paper-section {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+/* Signature device: corner brackets in reef, tightening on hover */
+.frame {
+  position: relative;
+}
+
+.frame::before,
+.frame::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-color: var(--reef);
+  border-style: solid;
+  pointer-events: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.frame::before {
+  top: -1px;
+  left: -1px;
+  border-width: 1.5px 0 0 1.5px;
+}
+
+.frame::after {
+  bottom: -1px;
+  right: -1px;
+  border-width: 0 1.5px 1.5px 0;
+}
+
+.frame:hover::before {
+  top: -3px;
+  left: -3px;
+  width: 16px;
+  height: 16px;
+}
+
+.frame:hover::after {
+  bottom: -3px;
+  right: -3px;
+  width: 16px;
+  height: 16px;
+}
+
+.paper-section .frame::before,
+.paper-section .frame::after {
+  border-color: var(--steel);
+}
+
+/* corner-marks: same bracket device, used on paper-section components
+   (the calculator) built directly against --gulf/--ink. */
+.corner-marks {
+  position: relative;
+}
+
+.corner-marks::before,
+.corner-marks::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-color: var(--gulf);
+  border-style: solid;
+  pointer-events: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.corner-marks::before {
+  top: -1px;
+  left: -1px;
+  border-width: 1.5px 0 0 1.5px;
+}
+
+.corner-marks::after {
+  bottom: -1px;
+  right: -1px;
+  border-width: 0 1.5px 1.5px 0;
+}
