@@ -1,42 +1,34 @@
-# 🌊 Dock & Dune
+# Dock & Dune 🌊🔨
 
-A single-page waterfront ownership guide for Okaloosa County, FL — flood
-zones, dock permitting, and wind mitigation, plus an interactive cost
-estimator, from Lindsey Howard (eXp Realty / Home, Handled.).
+A fast, responsive, and visually modern web platform built for **Dock & Dune**, specializing in coastal marine construction, custom dock building, seawalls, and dune/shoreline restoration.
 
-### Tech Stack
+## 🛠 Tech Stack
+- **Framework:** Next.js (App Router)
+- **Styling:** Tailwind CSS
+- **Language:** TypeScript
+- **Icons & UI:** Lucide React / Modern UI Components
+- **Deployment:** Vercel
 
-- Next.js 15 (App Router)
-- Tailwind CSS v4
-- Framer Motion (via `LazyMotion` + `domAnimation` for a trimmed bundle)
-- react-icons
+## ✨ Key Features
+- **Modern Coastal Aesthetic:** Clean, conversion-focused design optimized for high-end residential and commercial coastal clients.
+- **Service Showcases:** Dedicated sections for custom dock builds, marine repairs, deck installations, and dune preservation.
+- **Interactive Project Gallery:** High-performance media grid for viewing past construction builds and shoreline projects.
+- **Lead Capture & Quote Request:** Streamlined contact workflow for estimating and consultations.
+- **Fully Responsive & Accessible:** Optimized for seamless performance across mobile, tablet, and desktop viewports.
 
-### Getting Started
+## 🚀 Getting Started
 
+### Prerequisites
+- Node.js 18.x or later
+- npm, pnpm, or yarn
+
+### Installation
 ```bash
+# Clone the repository
+git clone [https://github.com/your-username/dock-and-dune.git](https://github.com/your-username/dock-and-dune.git)
+
+# Install dependencies
 npm install
+
+# Run development server
 npm run dev
-```
-
-Visit http://localhost:3000.
-
-### Structure
-
-```
-app/
-├── components/
-│   ├── Header.jsx          # Sticky nav, links back to Home, Handled.
-│   ├── Hero.jsx
-│   ├── Guide.jsx            # Flood zones / permitting / wind mitigation cards
-│   ├── CostCalculator.jsx   # Interactive waterfront insurance estimator
-│   └── Footer.jsx
-├── layout.js
-├── page.js
-└── globals.css              # Shares the Home, Handled. design tokens
-```
-
-### Note on the calculator
-
-`CostCalculator.jsx` produces **illustrative estimates only**, built from
-rough, publicly-reasoned coefficients — not real underwriting data. Keep
-the disclaimer copy intact if you extend it.
